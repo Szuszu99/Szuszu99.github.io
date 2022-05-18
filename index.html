@@ -1,1 +1,43 @@
-"Hello world" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sensors.js" type="module"></script>
+    <title>Iot Projekt</title>
+</head>
+<body style="padding: 1rem;">
+    <h2 style="color: black;">Projekt IoT Szczyszyk Wojtowicz</h2>
+    <div>
+        <p>
+            <span>Akcelerometr oś X:</span>
+            <span id="x">0</span>
+        </p>
+        <p>
+            <span>Akcelerometr oś Y:</span>
+            <span id="y">0</span>
+        </p>
+        <p>
+            <span>Akcelerometr oś Z:</span>
+            <span id="z">0</span>
+        </p>
+        <p>
+            <span id="error_name"></span>
+            <span id="error_message"></span>
+        </p>
+
+        <form>
+        <label for="at">Token dostępu</label><br />
+        <input type="text" id="at" name="at" /><br />
+        <input type="button" value="Start" id="start" />
+        <input type="button" value="Stop" id="stop" />
+        </form>
+        <p>
+            <a href="http://iot.imei.uz.zgora.pl/dashboard/45efc6e0-d302-11ec-ac8e-9594c052208d?publicId=025efec0-d305-11ec-ac8e-9594c052208d" target="_blank" rel="noopener noreferrer">dashboard</a>
+        </p>
+        <h2>Status:</h2>
+        <span id="status"></span>
+    </div>
+</body>
+</html>
