@@ -43,5 +43,12 @@ function stop(){
     accelerometer.stop();
 }
 
-document.getElementById("start").addEventListener("click",start,false);
-document.getElementById("stop").addEventListener("click",stop,false)
+var startbtn = document.getElementById('start');
+if(startbtn){
+    startbtn.addEventListener('click', start, false);
+}
+
+var stopbtn = document.getElementById('stop');
+if(startbtn){
+    startbtn.addEventListener('click', stop, false);
+}
