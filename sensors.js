@@ -6,7 +6,7 @@ var accelerometer = new LinearAccelerationSensor({frequency: 1});
 function start(){
 
     let at = document.getElementById("at").value;
-    let url = "http://iot.imei.uz.zgora.pl/dashboard/45efc6e0-d302-11ec-ac8e-9594c052208d?publicId=025efec0-d305-11ec-ac8e-9594c052208d" + at + "/telemetry";
+    let url = "http://iot.imei.uz.zgora.pl:80/api/v1/" + at + "/telemetry";
 
 
     accelerometer.start();
@@ -43,5 +43,5 @@ function stop(){
     accelerometer.stop();
 }
 
-document.getElementById("Start").addEventListener("click",start,false);
+document.getElementById("start").addEventListener("click",start,false);
 document.getElementById("stop").addEventListener("click",stop,false)
