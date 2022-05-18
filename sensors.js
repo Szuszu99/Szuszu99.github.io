@@ -21,6 +21,10 @@ function start(){
         document.getElementById("y").innerHTML = y;
         document.getElementById("z").innerHTML = z;
         
+        let telemetry = {x: x, y:y, z:z };
+        let activity = setActivity(x,y,z);
+        let status = {edgeStatus: activity};
+        
         makePost(url, JSON.stringify(telemetry));
 
         makePost(url, JSON.stringify(status));
